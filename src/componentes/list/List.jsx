@@ -5,6 +5,7 @@ export default function List(props) {
     <div className='list'>
       <label>{props.label}</label>
       <select required={props.mandatory} onChange={evento => props.aoAlterado(evento.target.value)} value={props.valor} >
+        <option value=''></option>
         {props.itens.map(item => <option key={item}>{item}</option>)}
       </select>
     </div>
